@@ -5,7 +5,8 @@
 Как запускать:
 
 <code>
-npm install // Установить необходимые зависимости <br>
+npm install // Установить необходимые зависимости
+<br>
 npm run devstart // Запуск nodemon
 </code>
 
