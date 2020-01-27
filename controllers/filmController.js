@@ -33,4 +33,3 @@ exports.film_detail = function(req, res, next) {
     });
 
 };
-

@@ -4,8 +4,6 @@ var router = express.Router();
 var film_controller = require('../controllers/filmController');
 var form_controller = require('../controllers/reservationController');
 
-/// FILM ROUTES ///
-
 router.get('/', film_controller.film_list);  
 
 router.get('/done', form_controller.done_create_get);
