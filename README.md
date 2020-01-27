@@ -5,9 +5,10 @@
 Как запускать:
 
 <code>
-npm install
-<br>
-npm run devstart
+npm install // Установить необходимые зависимости
+</code>
+<code>
+npm run devstart // Запуск nodemon
 </code>
 
 далее необходимо обратиться к <code>localhost:3000</code>
