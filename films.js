@@ -16,7 +16,6 @@
    pathToLogo: '/images/delo-logo.jpg', genres: 'Драма, биография', country: 'США',
    showtimes: [{time: "13:50", price: "100p.", format: "3D"}, {time: "16:20", price: "150p.", format: "3D"}, {time: "19:20", price: "150p.", format: "2D"}, {time: "22:10", price: "200p.", format: "2D"}]},
 
-
    {title: 'Проклятие', overview: 'После того как молодая женщина убила собственную семью в своем доме, мать-одиночка и детектив пытается расследовать дело. Вскоре выясняется, что дом проклят мстительным призраком, обрекающим всех входящих в него на смерть. Она спешит спасти себя и своего ребенка от демонической силы дома по соседству.',
     pathToLogo: '/images/proklyatie-logo.jpg', genres: 'Ужасы', country: 'Канада, США',
     showtimes: [{time: "13:50", price: "100p.", format: "3D"}, {time: "16:20", price: "150p.", format: "3D"}, {time: "19:20", price: "150p.", format: "2D"}, {time: "22:10", price: "200p.", format: "2D"}]},
