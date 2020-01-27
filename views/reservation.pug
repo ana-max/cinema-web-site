@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  form(class="get-sakaz" method='POST', action='', name="myform")
+    h4(class="film-detail-span") Данные для получения заказа:
+    div.form-group
+      input(
+          type="email",
+          class="email-address"
+          name="email_address", 
+          id="email_address",
+          placeholder="Введите E-mail",
+          width="100px",
+          class="reservation-input",
+          required
+        )
+      br
+      section(class="bank-card")
+        header(class="bank-card__title") Банковская карта
+        input(
+          class="bank-card__number",
+          type="text",
+          name="cardcode",
+          pattern="[0-9]{4}\\s[0-9]{4}\\s[0-9]{4}\\s[0-9]{4}",
+          placeholder="XXXX XXXX XXXX XXXX",
+          required
+        )
+        br
+        input(
+          class="bank-card__data",
+          type="text",
+          name="cardcodedata",
+          pattern="[0-9]{2}\\s/\\s[0-9]{2}",
+          placeholder="ММ / ГГ",
+          required
+        )
+        input(
+          class="bank-card__cvc",
+          type="text",
+          name="cardcodecvc",
+          pattern="[0-9]{3}",
+          placeholder="CVC",
+          required
+        )
+    button.btn.btn-primary(type='submit') Забронировать      
+
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg

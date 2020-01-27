@@ -1,0 +1,41 @@
+.image-in-detail
+{
+    float: left;
+    margin-right: 20px;
+    width: 250px;
+}
+
+.describe
+{
+    color: #fff;
+    margin-top: 70px;
+}
+
+.film-detail-span,
+.film-detail
+{
+    color: #fff;
+}
+
+.film-detail-span
+{
+    opacity: 0.7;
+}
+
+.cinema-time-button
+{
+    border: 4px solid #ffdc41;
+    margin: 0 10px;
+    background-color: #0f1e37;
+    color: #fff;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 800px) {
+    .image-in-detail
+    {
+        float: none;
+        width: 500;
+        margin-right: 20px;
+    }
+}

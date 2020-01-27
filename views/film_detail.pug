@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1(class="describe") #{film.title}
+  
+  img(class="image-in-detail", src=film.pathToLogo, alt="")
+  h3(class="film-detail-span") #[strong Описание:] 
+  p(class="film-detail") #{film.overview}
+  p(class="film-detail") #[strong(class="film-detail-span") Жанры:] #{film.genres}
+  p(class="film-detail") #[strong(class="film-detail-span") Страна:] #{film.country}
+  ul(class="list-group list-group-flush")
+    each info in film.showtimes
+      form(method='GET', action='http://localhost:3000/catalog/film/places' class="times-button")
+        div.form-group
+          input(type="hidden", name="film", value=film.title)
+          input(type="hidden", name="time", value=info.time)
+          input(type="hidden", name="price", value=info.price)
+          input(type="hidden", name="format", value=info.format)
+        button(type='submit', class="cinema-time-button"): li
+          p #{info.time}
+          p #{info.price} #{info.format}
+    else
+      li Нет фильмов.
+
+
+  
+ 
+      

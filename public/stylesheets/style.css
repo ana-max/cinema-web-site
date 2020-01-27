@@ -1,0 +1,70 @@
+body
+{
+    background-color: #0f1e37;
+    color: #fff;
+}
+
+.content
+{
+    min-height: calc(100vh - 70px);
+}
+
+.sidebar-nav 
+{
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.cinema-header {
+    width: 100%;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    background: #2d3c55;
+    vertical-align: top;
+    line-height: 50px;
+    box-shadow: 0 0 5px rgba(0,0,0,.5);
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    padding-left: 29px;
+}
+  
+.cinema-header:hover,
+.cinema-header:active
+{
+    color: white;
+}
+
+.cinema-header::before
+{
+    display: inline-block;
+    content: '';
+    background-image: url('../images/cinema-icon.png');
+    margin-bottom: -2px;
+    margin-right: 4px;
+    width: 25px;
+    height: 25px;
+}
+
+.get-sakaz
+{
+    margin-top: 70px;
+    color: black;
+}
+
+.times-button
+{
+    display: inline-block;
+}
+
+.reservation-input
+{
+    width: 250px;
+}
+
+.done-form
+{
+    margin-top: 70px;
+}

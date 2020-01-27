@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  form(method='GET', action='/catalog/film/reservation' class="hall", id="form")
+    h2 #{cinemaFilm} #{cinemaFormat} 
+    h4 Сегодня в #{cinemaTime}
+    div.form-group
+      each row in seats
+        each seat in row
+          if !avaliables[cinemaFilm][cinemaTime].includes(seat)
+            input(type="checkbox", name="place", value=seat, class="form-check-input", id=seat)
+            label(for=seat, class="form-check-label", name="place", 
+            title=`Ряд: ${seat.split(' ')[0]}. Место ${seat.split(' ')[1]}`, value=seat)
+          else
+            input(type="checkbox", name="place", value=seat, 
+                  class="form-check-input", id=seat disabled)
+            label(for=seat, class="form-check-label", title="Забронировано", name="place", value=seat)
+        <br>
+    button.btn.btn-primary(type='submit') Выбрать места
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg

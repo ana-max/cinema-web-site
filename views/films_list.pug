@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  ul(class="film-list")
+    each film in film_list
+      li
+       section(class="film-card")
+        figure(class="film-card__image")
+          a(href=film.url): img(class="film-img"
+                                src=film.pathToLogo)
+        header(class="film-card__title"): a(class="film-title" href=film.url) #{film.title}
+        p(class="film-card__description") #{film.genres}
+    else
+      li Нет фильмов.

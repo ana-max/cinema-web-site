@@ -1,0 +1,73 @@
+.hall
+{
+    margin-top: 70px;
+}
+
+.form-check-input
+{
+    display: none;
+}
+
+.form-check-input + .form-check-label
+{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin: 4px;
+    background-color: #4169E1;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.form-check-input + .form-check-label:hover,
+.form-check-input:checked + .form-check-label
+{
+    width: 18px;
+    height: 18px;
+    margin: 3px;
+}
+
+.form-check-input:checked + .form-check-label
+{
+    background-color: indigo;
+}
+
+.form-check-input:disabled + .form-check-label,
+.form-check-input:disabled + .form-check-label:hover
+{
+    width: 14px;
+    height: 14px;
+    margin: 5px;
+    background-color: grey;
+}
+
+@media screen and (max-width: 720px) {
+    .form-check-input + .form-check-label
+    {
+        width: 12px;
+        height: 12px;
+        margin: 2px;
+    }
+
+    .form-check-input + .form-check-label:hover,
+    .form-check-input:checked + .form-check-label
+    {
+        width: 14px;
+        height: 14px;
+        margin: 1px;
+    }
+
+    .form-check-input:checked + .form-check-label
+    {
+        background-color: indigo;
+    }
+
+    .form-check-input:disabled + .form-check-label,
+    .form-check-input:disabled + .form-check-label:hover
+    {
+        width: 10px;
+        height: 10px;
+        margin: 3px;
+    }
+
+}

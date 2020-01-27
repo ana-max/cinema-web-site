@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  form(class="done-form", method='POST', action='')
+    h1 Ваши билеты забронированы!
+    div.form-group
+    button.btn.btn-primary(type='submit') Вернуться на главную страницу      
+
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg
