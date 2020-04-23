@@ -4,7 +4,9 @@
 
 В основе Express, Pug, MongoDB
 
-Как запускать:
+Сcылка на приложение: https://cinema-web-site.herokuapp.com/
+
+Как локально запускать:
 
 <code>
 npm install // Установить необходимые зависимости
@@ -15,3 +17,4 @@ npm run devstart // Запуск nodemon
 </code>
 
 далее необходимо обратиться к <code>localhost:3000</code>
+

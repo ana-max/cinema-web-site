@@ -35,22 +35,22 @@ function getEmail() {
 }
 
 async function main(receivers) {
-  let transporter = nodemailer.createTransport({
-    host: "smtp.mail.ru",
-    port: 465,
-    secure: true,
-    auth: {
-      user: '***', // Ввести свой 
-      pass: '***' // Ввести свой
-    }
-  });
+    let transporter = nodemailer.createTransport({
+        host: 'smtp.mail.ru',
+        port: 465,
+        secure: true,
+        auth: {
+            user: process.env.MAIL,
+            pass: process.env.PASSWORD
+        }
+    });
 
-  let info = await transporter.sendMail({
-    from: '"Kek Cinema 👻" <***>', // Ввести свой
-    to: receivers,
-    subject: "Уведомление о брони",
-    text: `Вы забронировали билет на фильм ${cinemaFilm} время ${cinemaTime} по цене ${cinemaPrice} в формате ${cinemaFormat}`,
-    html: getEmail()
+    let info = await transporter.sendMail({
+        from: `"Kek Cinema 👻" <${process.env.MAIL}>`,
+        to: receivers,
+        subject: "Уведомление о брони",
+        text: `Вы забронировали билет на фильм ${cinemaFilm} время ${cinemaTime} по цене ${cinemaPrice} в формате ${cinemaFormat}`,
+        html: getEmail()
   });
 }
 

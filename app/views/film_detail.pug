@@ -10,7 +10,7 @@ block content
   p(class="film-detail") #[strong(class="film-detail-span") Страна:] #{film.country}
   ul(class="list-group list-group-flush")
     each info in film.showtimes
-      form(method='GET', action='http://localhost:3000/catalog/film/places' class="times-button")
+      form(method='GET', action='/catalog/film/places' class="times-button")
         div.form-group
           input(type="hidden", name="film", value=film.title)
           input(type="hidden", name="time", value=info.time)

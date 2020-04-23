@@ -6,9 +6,9 @@
   },
   "private": true,
   "scripts": {
-    "devstart": "nodemon ./bin/www",
+    "devstart": "nodemon app/index.js",
     "build": "npm-run-all --parallel build:*",
-    "build:pug": "copyfiles --up 1 \"./views/**/*\" \"./public/javascripts/*\" \"./public/images/*\" \"./public/stylesheets/*\" dist/public",
+    "build:pug": "copyfiles --up 1 \"app/views/**/*\" \"app/public/javascripts/*\" \"./public/images/*\" \"./public/stylesheets/*\" dist/public",
     "deps:all": "npm ci",
     "deps:production": "npm ci --production",
     "heroku:login": "heroku container:login",
@@ -18,7 +18,7 @@
     "heroku:logs": "heroku logs --tail --app cinema-web-site",
     "heroku": "npm-run-all heroku:*",
     "heroku-init": "heroku login && heroku create $npm_package_name",
-    "start": "node ./bin/www.js",
+    "start": "node app/index.js",
     "surge": "surge -p ./dist/public -d $npm_package_name.surge.sh",
     "deploy": "npm-run-all build surge heroku",
     "serverstart": "DEBUG=cinema-web-site:* npm run devstart"
