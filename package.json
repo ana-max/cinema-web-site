@@ -24,26 +24,26 @@
     "serverstart": "DEBUG=cinema-web-site:* npm run devstart"
   },
   "dependencies": {
-    "async": "^2.6.2",
-    "body-parser": "^1.19.0",
-    "compression": "^1.7.3",
-    "cookie-parser": "~1.4.3",
-    "copyfiles": "^2.2.0",
-    "cross-env": "^7.0.2",
-    "debug": "~2.6.9",
-    "express": "~4.16.0",
-    "express-validator": "^5.3.1",
-    "helmet": "^3.15.1",
-    "http-errors": "~1.6.2",
-    "moment": "^2.24.0",
-    "mongoose": "^5.7.5",
-    "morgan": "~1.9.0",
-    "nodemailer": "^6.4.2",
-    "npm-run-all": "^4.1.5",
+    "async": "2.6.2",
+    "body-parser": "1.19.0",
+    "compression": "1.7.3",
+    "cookie-parser": "1.4.3",
+    "copyfiles": "2.2.0",
+    "cross-env": "7.0.2",
+    "debug": "2.6.9",
+    "express": "4.16.0",
+    "express-validator": "5.3.1",
+    "helmet": "3.15.1",
+    "http-errors": "1.6.2",
+    "moment": "2.24.0",
+    "mongoose": "5.7.5",
+    "morgan": "1.9.0",
+    "nodemailer": "6.4.2",
+    "npm-run-all": "4.1.5",
     "pug": "2.0.0-beta11",
-    "surge": "^0.21.3"
+    "surge": "0.21.3"
   },
   "devDependencies": {
-    "nodemon": "^1.18.10"
+    "nodemon": "1.18.10"
   }
 }
