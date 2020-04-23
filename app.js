@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var catalogRouter = require('./routes/catalog');
-var films = require('./films');
+var films = require('./mocks/films');
 
 var compression = require('compression');
 var helmet = require('helmet');

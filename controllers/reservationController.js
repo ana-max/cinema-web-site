@@ -3,7 +3,7 @@ const { sanitizeBody } = require('express-validator/filter');
 const nodemailer = require('nodemailer');
 const async = require('async');
 
-const seats = require('../seats')
+const seats = require('../mocks/seats')
 
 let cinemaFilm;
 let cinemaTime;

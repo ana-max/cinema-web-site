@@ -1,6 +1,8 @@
 Проект по курсу "Web и DHTML"
 
-Сайт кинотеатра "Kek Cinema"
+Сайт кинотеатра "Kek Cinema".
+
+В основе Express, Pug, MongoDB
 
 Как запускать:
 

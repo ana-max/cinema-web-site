@@ -6,8 +6,21 @@
   },
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www",
+    "build": "npm-run-all --parallel build:*",
+    "build:pug": "copyfiles --up 1 \"./views/**/*\" \"./public/javascripts/*\" \"./public/images/*\" \"./public/stylesheets/*\" dist/public",
+    "deps:all": "npm ci",
+    "deps:production": "npm ci --production",
+    "heroku:login": "heroku container:login",
+    "heroku:push": "heroku container:push web --app cinema-web-site",
+    "heroku:release": "heroku container:release web --app cinema-web-site",
+    "heroku:open": "heroku open --app cinema-web-site",
+    "heroku:logs": "heroku logs --tail --app cinema-web-site",
+    "heroku": "npm-run-all heroku:*",
+    "heroku-init": "heroku login && heroku create $npm_package_name",
+    "start": "node ./bin/www.js",
+    "surge": "surge -p ./dist/public -d $npm_package_name.surge.sh",
+    "deploy": "npm-run-all build surge heroku",
     "serverstart": "DEBUG=cinema-web-site:* npm run devstart"
   },
   "dependencies": {
@@ -15,6 +28,8 @@
     "body-parser": "^1.19.0",
     "compression": "^1.7.3",
     "cookie-parser": "~1.4.3",
+    "copyfiles": "^2.2.0",
+    "cross-env": "^7.0.2",
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "express-validator": "^5.3.1",
@@ -24,7 +39,9 @@
     "mongoose": "^5.7.5",
     "morgan": "~1.9.0",
     "nodemailer": "^6.4.2",
-    "pug": "2.0.0-beta11"
+    "npm-run-all": "^4.1.5",
+    "pug": "2.0.0-beta11",
+    "surge": "^0.21.3"
   },
   "devDependencies": {
     "nodemon": "^1.18.10"
