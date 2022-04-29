@@ -24,7 +24,7 @@
     "serverstart": "DEBUG=cinema-web-site:* npm run devstart"
   },
   "dependencies": {
-    "async": "2.6.2",
+    "async": "2.6.4",
     "body-parser": "1.19.0",
     "compression": "1.7.3",
     "cookie-parser": "1.4.3",
