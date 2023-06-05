@@ -5,7 +5,7 @@ COPY app /app
 COPY package.json /
 COPY package-lock.json /
 
-RUN npm run build
+# RUN npm run build
 # COPY dist /dist
 RUN npm run deps:production
 
