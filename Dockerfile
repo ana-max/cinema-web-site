@@ -6,7 +6,7 @@ COPY package.json /
 COPY package-lock.json /
 
 RUN npm run build
-COPY dist /dist
+# COPY dist /dist
 RUN npm run deps:production
 
 ENV NODE_ENV production
